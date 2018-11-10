@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.chenjiajuan.commom.weight.BorderedRadioButton
+            android:id="@+id/rbRecomLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="精选"
+            android:textColor="@color/content_tab_text"
+            android:textSize="24sp"
+            android:button="@null"
+            />
+
+        <com.chenjiajuan.commom.weight.BorderedRadioButton
+            android:id="@+id/rbAddGoodsLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="零食"
+            android:textColor="@color/content_tab_text"
+            android:textSize="24sp"
+            android:button="@null"
+            />
+
+        <com.chenjiajuan.commom.weight.BorderedRadioButton
+            android:id="@+id/rbMemberLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="服饰"
+            android:textColor="@color/content_tab_text"
+            android:textSize="24sp"
+            android:button="@null"
+            />
+
+    </RadioGroup>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_replace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:layout_marginTop="51dp"
+
+        >
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

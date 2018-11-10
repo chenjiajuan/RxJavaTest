@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RxJavaTest</string>
+    <string name="shoppingguide_member_ai_score">意向评分：</string>
+    <string name="shoppingguide_member_ai_score_null">意向评分：无</string>
+</resources>
