@@ -1,1 +1,1 @@
-include ':app', ':module_home', ':lib_commom', ':module_shop'
+include ':app', ':module_home', ':lib_commom', ':module_shop', ':routerannotation', ':processor', ':module_dao', ':module_dao', ':moudle_dao'

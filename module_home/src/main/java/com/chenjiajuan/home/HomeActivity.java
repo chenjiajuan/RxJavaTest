@@ -10,6 +10,7 @@ import com.chenjiajuan.commom.YzFragmentManager;
 import com.chenjiajuan.module_home.R;
 
 public class HomeActivity extends BaseActivity {
+
     private static final String TAG=HomeActivity.class.getSimpleName();
 
     @Override

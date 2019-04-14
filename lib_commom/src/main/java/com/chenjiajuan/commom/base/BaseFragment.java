@@ -10,7 +10,6 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,7 @@ import butterknife.Unbinder;
  *
  * BaseFragment继承Fragment，实现了SharedVM.IShredData,即实现了LifecycleOwner
  */
-public abstract class BaseFragment extends Fragment implements SharedVM.ISharedData<Bundle> {
+public abstract class BaseFragment extends Fragment implements SharedVM.ISharedData<Bundle>{
     private static final String TAG=BaseFragment.class.getSimpleName();
     private YzFragmentManager yzFragmentManager;
     private Unbinder unbinder;

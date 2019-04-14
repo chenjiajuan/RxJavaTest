@@ -83,20 +83,15 @@ public class ContentFragment extends BaseFragment {
                                     RecomeFragment.class,mBundle, YzFragmentManager.LAUNCH_PULL);
                             obsverable(recomeFragment);
 
-                            Bundle bundle=new Bundle();
-                            bundle.putString(Action.ACTION_CONTENT,Action.ACTION_CONTENT);
-                            postData(bundle);
 
                         }else if (integer==R.id.rbMemberLayout){
                             rbRecomLayout.setCheckedState(false);
                             rbAddGoodsLayout.setCheckedState(false);
-                            rbRecomLayout.setCheckedState(true);
+                            rbMemberLayout.setCheckedState(true);
                             memberFragment=getYzFragmentManager().show(getContext(),R.id.fragment_replace,
                                     MemberFragment.class,mBundle,YzFragmentManager.LAUNCH_PULL);
                             obsverable(memberFragment);
-                            Bundle bundle=new Bundle();
-                            bundle.putString(Action.ACTION_CONTENT,Action.ACTION_CONTENT);
-                            postData(bundle);
+
 
                         }else if (integer==R.id.rbAddGoodsLayout){
                             rbRecomLayout.setCheckedState(false);
@@ -105,9 +100,6 @@ public class ContentFragment extends BaseFragment {
                              addGoodsFragment=getYzFragmentManager().show(getContext(),R.id.fragment_replace,
                                     AddGoodsFragment.class,mBundle,YzFragmentManager.LAUNCH_PULL);
                             obsverable(addGoodsFragment);
-                            Bundle bundle=new Bundle();
-                            bundle.putString(Action.ACTION_CONTENT,Action.ACTION_CONTENT);
-                            postData(bundle);
                         }
 
                     }
@@ -141,25 +133,29 @@ public class ContentFragment extends BaseFragment {
             public void onChanged(@Nullable Bundle bundle) {
                 Log.e(TAG,"接受到消息，bundle : "+bundle.toString());
                 if (bundle.containsKey(Action.ACTION_CONTENT_RECOMD)){
-                    bundle.putString("1111111111","1111111111111111");
-//                    if (memberFragment!=null){
-//                        memberFragment.postData(bundle);
-//                    }
                     if (recomeFragment!=null){
+                        //接受到来自注册页面的某个消息，需要传给其他页面，比如Recome页面，则获取到recom页面，调用它的postData
+                      //  Bundle bundle1=new Bundle();
+                        //bundle1.putString("11111","11111");
+                        //recomeFragment.postData(bundle1);
 
-                        //再向这个页面发送数据，这个页面的自我监听方法应该接收，
-//                        Bundle bundle1=new Bundle();
-                        bundle.putString("333333333333","33333333333");
-                        //recomeFragment.postData(bundle);
+                        //直接向bundle塞进数据,Recome也可以接受到bundle
+                        bundle.putString(Action.ACTION_INFO_QUERY_DATA,Action.ACTION_INFO_QUERY_DATA);
+                        recomeFragment.postData(bundle);
+
+
+
                     }
 
-                }else {
-                   // postData(bundle); //此时调用baseFragment的方法，这个fragment在BaseActivity内被注册了，
+                }else if (bundle.containsKey(Action.ACTION_INFO_TO_MENU)){
+                   // postData(bundle); 调用自身的数据传递方法，//此时调用baseFragment的方法，这个fragment在BaseActivity内被注册了，
+                    postData(bundle);
                 }
 
 
             }
         });
+
     }
 
 

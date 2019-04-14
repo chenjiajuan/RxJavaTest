@@ -18,14 +18,6 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".MemberSignService"
-            android:enabled="true"
-            android:process=":signService">
-            <intent-filter>
-                <action android:name="com.chenjiajuan.signdialog" />
-            </intent-filter>
-        </service>
 
         <!-- <activity android:name=".MessageActivity"></activity> -->
         <!--<activity android:name=".QRCodeActivity"></activity>-->

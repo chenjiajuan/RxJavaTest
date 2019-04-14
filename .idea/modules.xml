@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RxJavaTest.iml" filepath="$PROJECT_DIR$/RxJavaTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_commom/lib_commom.iml" filepath="$PROJECT_DIR$/lib_commom/lib_commom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_dao/module_dao.iml" filepath="$PROJECT_DIR$/module_dao/module_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_home/module_home.iml" filepath="$PROJECT_DIR$/module_home/module_home.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_shop/module_shop.iml" filepath="$PROJECT_DIR$/module_shop/module_shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moudle_dao/moudle_dao.iml" filepath="$PROJECT_DIR$/moudle_dao/moudle_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/processor/processor.iml" filepath="$PROJECT_DIR$/processor/processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/routerannotation/routerannotation.iml" filepath="$PROJECT_DIR$/routerannotation/routerannotation.iml" />
+    </modules>
+  </component>
+</project>

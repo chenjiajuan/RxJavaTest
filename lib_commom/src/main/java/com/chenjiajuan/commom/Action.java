@@ -10,4 +10,6 @@ public class Action {
     public static final String ACTION_HOME_ACTIVITY="ACTION_HOME_ACTIVITY";
     public static final String ACTION_CONTENT_RECOMD="ACTION_CONTENT_RECOMD";
     public static final String ACTION_CONTENT_MEMBER="ACTION_CONTENT_MEMBER";
+    public static final String ACTION_INFO_TO_MENU="ACTION_INFO_TO_MENU";
+    public static final String ACTION_INFO_QUERY_DATA="ACTION_INFO_QUERY_DATA";
 }

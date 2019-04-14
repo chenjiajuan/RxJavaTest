@@ -11,12 +11,13 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import org.json.JSONObject;
+import com.chenjaijuan.routerannotation.BindView;
+import com.chenjiajuan.moudledao.DaoActivity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -51,6 +52,13 @@ public class MainActivity extends Activity {
     public static String APP_PATH = SDPATH + "retail" + File.separator;
     public static String IMAGE_PATH = APP_PATH + "img" + File.separator;
 
+    @BindView(R.id.ll_bten)
+    LinearLayout mLinearLAyout;
+
+    @BindView(R.id.btn_start)
+    Button btnStart;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,8 +70,9 @@ public class MainActivity extends Activity {
         Bitmap bitmap = iv_image.getDrawingCache();
         String url="https://h5.youzan.com/v2/goods/2fqdfzlx94883?from_source=retail_sales&from_params=sales_id~907572682!sales_ch~" +
                 "online!sales_act_id~1!sales_display_id~440670912!store_kdt_id~18938611!online_kdt_id~18938611!head_kdt_id~18938611!spread_type~1";
-        URLRequest("40666106",url);
-        testList();
+       // URLRequest("40666106",url);
+       // testList();
+
     }
 
     public static Map<String, String> URLRequest(String kdtId,String URL)
@@ -209,7 +218,6 @@ public class MainActivity extends Activity {
                     public void onCompleted() {
                         if (count+1==MAX_TIME){
                             //轮询超时，在此处处理结果
-                            showPopwindow(ll_bten);
                         }
                     }
 
@@ -237,25 +245,17 @@ public class MainActivity extends Activity {
 //            Log.e(TAG,"return ");
 //            return;
 //        }
-        compositeSubscription.add(pollQrSignCodeHide(1536984005));
+        //compositeSubscription.add(pollQrSignCodeHide(1536984005));
+
+        Intent intent=new Intent();
+        intent.setClass(MainActivity.this,DaoActivity.class);
+        startActivity(intent);
+
     }
 
     public void stopInterval(View view){
       compositeSubscription.clear();
 
-    }
-    private MemberLoginPop memberLoginPop;
-    public void showPopwindow(View view){
-        show(view);
-    }
-
-    public void show(View view){
-        if (memberLoginPop!=null&&memberLoginPop.isShowing()){
-            return;
-        }
-        memberLoginPop=new MemberLoginPop(this);
-        memberLoginPop.showAsDropDown(view, Gravity.TOP,100);
-        Log.e(TAG,"show pop window");
     }
 
 
