@@ -13,6 +13,5 @@ public class QRCodeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrcode);
         startActivity(new Intent(this, HomeActivity.class));
-        // 触发一次构建测试
     }
 }
