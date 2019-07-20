@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.chrnie:event-livedata:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/event-livedata-1.0.0.aar/4b3d538d6b22344ad1ace250e294bb81/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/event-livedata-1.0.0.aar/4b3d538d6b22344ad1ace250e294bb81/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/event-livedata-1.0.0.aar/db5797fd50a36dbc64239531baf735fa/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/event-livedata-1.0.0.aar/db5797fd50a36dbc64239531baf735fa/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
